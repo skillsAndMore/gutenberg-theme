@@ -110,11 +110,15 @@ a:hover,a:active{outline:0}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
+.site-content{width:80vw;margin:0 auto}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .updated:not(.published){display:none}
 .page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
 .page-links{clear:both;margin:0 0 1.5em}
+.alignfull{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:auto;max-width:1000%}
+.alignwide{margin-left:calc(25% - 25vw);margin-right:calc(25% - 25vw);width:auto;max-width:1000%}
+.alignwide img,.alignfull img{display:block;margin:0 auto}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
