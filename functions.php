@@ -159,6 +159,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Gutenberg additions.
+ */
+if (defined('GUTENBERG_VERSION')) {
+	require get_template_directory() . '/inc/gutenberg.php';
+}
+
 // function myplugin_register_book_post_type() {
 // 	$args = array(
 // 		'public' => true,
