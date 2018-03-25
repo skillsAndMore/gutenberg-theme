@@ -110,7 +110,7 @@ a:hover,a:active{outline:0}
 .clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
-.site-content{width:80vw;margin:0 auto}
+.site-content{width:75vw;margin:0 auto}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .updated:not(.published){display:none}
