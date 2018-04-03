@@ -30,8 +30,10 @@ function wctrn_add_gutenberg_support(){
 function wctrn_register_book_post_type() {
 	$args = array(
 		'public' => true,
-		'label'  => 'Libro',
+		'label'  => 'Books',
+		'show_in_rest' => true,
         'template' => array(
+            array( 'core/subhead'),
             array('core/columns', array(), array(
                 array('core/image', array('layout' => 'column-1')),
                 array('core/heading', array(
@@ -44,6 +46,7 @@ function wctrn_register_book_post_type() {
                 )),
             ))
         ),
+        'template_lock' => 'all',
 	);
 	register_post_type( 'book', $args );
 }
