@@ -19,5 +19,8 @@ function wctrn_add_gutenberg_support(){
         '#fff',
         '#444'
     );
+
+    add_theme_support( 'disable-custom-colors' );
+
 }
 
