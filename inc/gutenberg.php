@@ -34,7 +34,7 @@ function wctrn_register_book_post_type() {
 		'show_in_rest' => true,
         'template' => array(
             array( 'core/subhead'),
-            array('core/columns', array(), array(
+            array('core/columns', array('align' => 'wide'), array(
                 array('core/image', array('layout' => 'column-1')),
                 array('core/heading', array(
                     'placeholder' => 'Add Author...',
@@ -64,3 +64,18 @@ function wctrn_add_template_to_posts(){
     );
 }
 add_action('init', 'wctrn_add_template_to_posts');
+
+function wctrn_editor_scripts(){
+    wp_enqueue_style(
+        'wctrn-editor-css',
+        get_stylesheet_directory_uri() . '/editor.css'
+    );
+}
+add_action('enqueue_block_editor_assets', 'wctrn_editor_scripts');
+
+// function wctrn_editor_scripts()
+// {
+//     wp_enqueue_style(...);
+//     wp_enqueue_script(...);
+// }
+// add_action('enqueue_block_assets', 'wctrn_editor_scripts');
