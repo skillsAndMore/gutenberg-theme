@@ -51,3 +51,16 @@ function wctrn_register_book_post_type() {
 	register_post_type( 'book', $args );
 }
 add_action( 'init', 'wctrn_register_book_post_type' );
+
+
+function wctrn_add_template_to_posts(){
+    $post_type_object = get_post_type_object('post'); // o page
+    $post_type_object->template = array(
+        array('core/subhead'),
+        array('core/image', array('align' => 'left')),
+        array('core/paragraph', array(
+            'placeholder' => 'Aggiungi un paragrafo',
+        )),
+    );
+}
+add_action('init', 'wctrn_add_template_to_posts');
