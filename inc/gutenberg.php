@@ -24,3 +24,27 @@ function wctrn_add_gutenberg_support(){
 
 }
 
+/**
+ * Registro CPT con Custom Template con layout a colonne
+ */
+function wctrn_register_book_post_type() {
+	$args = array(
+		'public' => true,
+		'label'  => 'Libro',
+        'template' => array(
+            array('core/columns', array(), array(
+                array('core/image', array('layout' => 'column-1')),
+                array('core/heading', array(
+                    'placeholder' => 'Add Author...',
+                    'layout' => 'column-2'
+                )),
+                array('core/paragraph', array(
+                    'placeholder' => 'Add a inner paragraph',
+                    'layout' => 'column-2'
+                )),
+            ))
+        ),
+	);
+	register_post_type( 'book', $args );
+}
+add_action( 'init', 'wctrn_register_book_post_type' );
